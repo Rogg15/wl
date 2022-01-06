@@ -1,0 +1,130 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ForNiBs = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Panel = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local Input = Instance.new("TextBox")
+local CheckSystem = Instance.new("TextButton")
+local CoolThing = Instance.new("TextLabel")
+local CoolThing2 = Instance.new("TextLabel")
+
+--Properties:
+
+ForNiBs.Name = "ForNiBs"
+ForNiBs.Parent = game.CoreGui
+
+Frame.Parent = ForNiBs
+Frame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.416824788, 0, 0.350122899, 0)
+Frame.Size = UDim2.new(0, 275, 0, 130)
+
+Panel.Name = "Panel"
+Panel.Parent = Frame
+Panel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Panel.BorderSizePixel = 0
+Panel.Size = UDim2.new(0, 275, 0, 22)
+Panel.Font = Enum.Font.SourceSansBold
+Panel.Text = "ROG V Whitelist System"
+Panel.TextColor3 = Color3.fromRGB(255, 0, 0)
+Panel.TextSize = 18.000
+
+ImageLabel.Parent = Panel
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Position = UDim2.new(0, 0, 1, 0)
+ImageLabel.Size = UDim2.new(0, 274, 0, 107)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=8457811653"
+
+Input.Name = "Input"
+Input.Parent = Frame
+Input.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Input.BorderSizePixel = 0
+Input.Position = UDim2.new(0.0363636352, 0, 0.340126514, 0)
+Input.Size = UDim2.new(0, 255, 0, 15)
+Input.ClearTextOnFocus = false
+Input.Font = Enum.Font.SourceSans
+Input.PlaceholderColor3 = Color3.fromRGB(255, 0, 0)
+Input.PlaceholderText = "Enter Your Key Here"
+Input.Text = ""
+Input.TextColor3 = Color3.fromRGB(255, 0, 0)
+Input.TextSize = 14.000
+
+CheckSystem.Name = "CheckSystem"
+CheckSystem.Parent = Frame
+CheckSystem.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CheckSystem.BorderSizePixel = 0
+CheckSystem.Position = UDim2.new(0.276363641, 0, 0.712320864, 0)
+CheckSystem.Size = UDim2.new(0, 122, 0, 17)
+CheckSystem.Font = Enum.Font.SourceSans
+CheckSystem.Text = "Whitelist"
+CheckSystem.TextColor3 = Color3.fromRGB(255, 0, 0)
+CheckSystem.TextSize = 14.000
+
+CoolThing.Name = "CoolThing"
+CoolThing.Parent = Frame
+CoolThing.BackgroundColor3 = Color3.fromRGB(23, 58, 255)
+CoolThing.Position = UDim2.new(0.0363636352, 0, 0.446153611, 0)
+CoolThing.Size = UDim2.new(0, 6, 0, 1)
+CoolThing.Font = Enum.Font.SourceSans
+CoolThing.Text = ""
+CoolThing.TextColor3 = Color3.fromRGB(0, 0, 0)
+CoolThing.TextSize = 14.000
+
+CoolThing2.Name = "CoolThing2"
+CoolThing2.Parent = Frame
+CoolThing2.BackgroundColor3 = Color3.fromRGB(23, 58, 255)
+CoolThing2.Position = UDim2.new(0.276363522, 0, 0.83846128, 0)
+CoolThing2.Size = UDim2.new(0, 122, 0, 0)
+CoolThing2.Font = Enum.Font.SourceSans
+CoolThing2.Text = ""
+CoolThing2.TextColor3 = Color3.fromRGB(0, 0, 0)
+CoolThing2.TextSize = 14.000
+
+-- Scripts:
+
+local function UTMW_fake_script() -- ForNiBs.LocalScript 
+	local script = Instance.new('LocalScript', ForNiBs)
+
+	local Frame = script.Parent.Frame
+	local CheckSystem = script.Parent.Frame.CheckSystem
+	local CoolThing = script.Parent.Frame.CoolThing
+	local Input = script.Parent.Frame.Input
+	CoolThing.Visible = false
+	
+	--Those local scripts create a home so yea
+	Input.MouseEnter:Connect(function()
+		CoolThing.Visible = true
+		CoolThing:TweenSize(UDim2.new(0, 255,0, 1))
+		
+	end)
+	
+	Input.MouseLeave:Connect(function()
+		CoolThing:TweenSize(UDim2.new(0, 1,0, 1))
+		wait(1)
+		CoolThing.Visible = false
+		
+	end)
+	
+	
+	
+	CheckSystem.MouseButton1Down:Connect(function()
+		if Input.Text == "Rog lng malakas" then
+			Frame:TweenPosition(UDim2.new(0.417, 0.417 ,0 , 1080))
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "Loaded!";
+		Text = "Enjoy Exploiting!";
+		Duration = 3;
+		})
+		
+			wait(2)
+			Frame.Visible = false
+			wait()
+			
+		end
+	end)
+end
+coroutine.wrap(UTMW_fake_script)()
