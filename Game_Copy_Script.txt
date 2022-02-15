@@ -1,0 +1,18 @@
+-- Credits To idk--
+
+-- Intructions
+Find a game
+Make sure you have good wifi
+make sure you dont disconnect while decompiling game
+Execute script--
+
+
+--How to get the game file
+First Open Your synapse X file
+Open Workspace
+And you'll get your roblox studio file--
+
+--Enjoy!
+
+
+Script: saveinstance()
