@@ -1,0 +1,11 @@
+		if game.Players.LocalPlayer.TeamColor.Name ~= "Medium stone grey" then
+			workspace.Remote.loadchar:InvokeServer()
+		else
+			workspace.Remote.loadchar:InvokeServer(nil, BrickColor.new("Bright orange").Name)
+			local savedcf = GetPos()
+			local savedcamcf = GetCamPos()
+			workspace.Remote.loadchar:InvokeServer(nil, BrickColor.new("Really red").Name)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = savedcf
+			workspace.CurrentCamera.CFrame = savedcamcf
+			workspace.Remote.TeamEvent:FireServer("Medium stone grey")
+		end
