@@ -68,4 +68,4 @@ end
 Tool.Equipped:Connect(OnEquipped)
 Tool.Changed:Connect(OnChanged)
 Sword.Parent = game.Players.LocalPlayer.Backpack
-end
+
