@@ -1,0 +1,28 @@
+	local events = {}
+	local gun = nil
+	local savedteam = game.Players.LocalPlayer.TeamColor.Name
+	for i,v in pairs(game.Players:GetPlayers()) do
+		if v ~= game.Players.LocalPlayer then
+			events[#events + 1] = {
+				Hit = v.Character:FindFirstChildOfClass("Part"),
+				Cframe = CFrame.new(),
+				RayObject = Ray.new(Vector3.new(), Vector3.new()),
+				Distance = 0
+			}
+		end
+	end
+	if not game.Players.LocalPlayer.Character:FindFirstChild("Taser") and not game.Players.LocalPlayer:FindFirstChild("Backpack"):FindFirstChild("Taser") then
+		savedteam = game.Players.LocalPlayer.TeamColor.Name
+		local savedcf = GetOrientation()
+		local camcf = workspace.CurrentCamera.CFrame
+		workspace.Remote.loadchar:InvokeServer(nil, BrickColor.new("Bright blue").Name)
+		workspace.CurrentCamera.CFrame = camcf
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = savedcf
+	end
+	gun = game.Players.LocalPlayer.Character:FindFirstChild("Taser") or game.Players.LocalPlayer.Backpack:FindFirstChild("Taser")
+	game.ReplicatedStorage.ShootEvent:FireServer(events, gun)
+	local savedcf = GetOrientation()
+	local camcf = workspace.CurrentCamera.CFrame
+	workspace.Remote.loadchar:InvokeServer(nil, BrickColor.new(savedteam).Name)
+	workspace.CurrentCamera.CFrame = camcf
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = savedcf
