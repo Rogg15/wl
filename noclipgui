@@ -26,7 +26,7 @@ BG.Draggable = true
 
 Title.Name = "Title"
 Title.Parent = BG
-Title.BackgroundColor3 = Color3.new(0.266667, 0.00392157, 0.627451)
+Title.BackgroundColor3 = Color3.new(0, 0, 0)
 Title.BorderColor3 = Color3.new(0.180392, 0, 0.431373)
 Title.BorderSizePixel = 2
 Title.Size = UDim2.new(0, 210, 0, 33)
@@ -39,7 +39,7 @@ Title.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373)
 Title.TextStrokeTransparency = 0
 
 Toggle.Parent = BG
-Toggle.BackgroundColor3 = Color3.new(0.266667, 0.00392157, 0.627451)
+Toggle.BackgroundColor3 = Color3.new(0, 0, 0)
 Toggle.BorderColor3 = Color3.new(0.180392, 0, 0.431373)
 Toggle.BorderSizePixel = 2
 Toggle.Position = UDim2.new(0.152380958, 0, 0.374192119, 0)
@@ -91,7 +91,7 @@ Credit.Position = UDim2.new(0.195238099, 0, 0.866141737, 0)
 Credit.Size = UDim2.new(0, 128, 0, 17)
 Credit.Font = Enum.Font.SourceSans
 Credit.FontSize = Enum.FontSize.Size18
-Credit.Text = "Created by KingLuna"
+Credit.Text = "Cs To Damain#1476"
 Credit.TextColor3 = Color3.new(1, 1, 1)
 Credit.TextSize = 16
 Credit.TextStrokeColor3 = Color3.new(0.196078, 0.196078, 0.196078)
