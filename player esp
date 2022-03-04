@@ -1,0 +1,67 @@
+for i,plr in pairs(game.Players:GetChildren()) do
+	if plr.Character and plr ~= game:GetService("Players").LocalPlayer then
+		local char = plr.Character
+		local randomcolor = BrickColor.Random().Color
+		for j,part in pairs(char:GetChildren()) do
+			if part:IsA("BasePart") or part:IsA("MeshPart") then
+			    if not part:FindFirstChild("NightVisionTag") then	
+			        local tag = Instance.new("StringValue", part)
+        			tag.Name = "NightVisionTag"
+        			
+        			local function surf(face)
+    			        local gui = Instance.new("SurfaceGui")
+    			        gui.Name = "NightVisionSurface"
+        				gui.LightInfluence = 1
+        				gui.AlwaysOnTop = true
+        				gui.Face = face
+        				
+        				local fr = Instance.new("Frame")
+        				fr.Size = UDim2.new(1,0,1,0)
+        				fr.BorderSizePixel = 0
+        				fr.BackgroundColor3 = randomcolor
+        				fr.BackgroundTransparency = 0.75
+        				fr.Parent = gui
+        				
+        				gui.Parent = part
+                    end
+        				
+    				surf("Top")
+    				surf("Bottom") 
+    				surf("Right") 
+    				surf("Left") 
+    				surf("Front")
+    				surf("Back")
+    				
+    				wait()
+				end
+			end
+			--wait()
+		end
+	end
+end
+
+
+-- OLD VERSION 23/1/2020 --
+--[[for i,plr in pairs(game.Players:GetChildren()) do
+	if plr.Character then
+		local char = plr.Character
+		for j,part in pairs(char:GetChildren()) do
+			if part:IsA("BasePart") or part:IsA("MeshPart") then
+				local bb = Instance.new("BillboardGui")
+				bb.Size = UDim2.new(2,0,2,0)
+				bb.LightInfluence = 0
+				bb.AlwaysOnTop = true
+				local fr = Instance.new("Frame")
+				fr.Size = UDim2.new(1,0,1,0)
+				fr.BorderColor3 = Color3.new(0,0,0)
+				fr.BorderSizePixel = 0
+				fr.BackgroundColor3 = Color3.new(0,1,0)
+				fr.BackgroundTransparency = 0.2
+				fr.Parent = bb
+				
+				bb.Parent = part
+			end
+			wait()
+		end
+	end
+end]]
