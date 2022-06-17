@@ -12,11 +12,11 @@ ShowerLib2.Settings.Default.ItemFont = Enum.Font.GothamSemibold
 ShowerLib2.Settings.Default.ItemTextColor = Color3.fromRGB(190, 190, 190);
 ShowerLib2.Settings.Default.ButtonBackgroundColor = Color3.fromRGB(18, 18, 19)
 ShowerLib2.Settings.Default.TextBoxBackgroundColor = Color3.fromRGB(18, 18, 19)
-ShowerLib2.Settings.Default.SideBarBackgroundColor = Color3.fromRGB(28, 28, 28)
+ShowerLib2.Settings.Default.SideBarBackgroundColor = Color3.fromRGB(16, 16, 16)
 ShowerLib2.Settings.Default.PageIndicatorBackgroundColor = Color3.fromRGB(16, 16, 16)
 
 --PageIndicator
---Color3.fromRGB(28, 28, 28)
+--Color3.fromRGB(12, 12, 12)
 
 local UIName = tostring(math.random(1, 100))..tostring("ShowerLib")..tostring(math.random(1, 100))
 
@@ -70,7 +70,7 @@ function ShowerLib2:SetSettings(Table)
     ShowerLib2.Settings.Default.ItemBackgroundColor = Table.ItemBackgroundColor or Color3.fromRGB(22, 22, 22);
     ShowerLib2.Settings.Default.ButtonBackgroundColor = Table.ButtonBackgroundColor or Color3.fromRGB(18, 18, 19)
     ShowerLib2.Settings.Default.TextBoxBackgroundColor = Table.TextBoxBackgroundColor or Color3.fromRGB(18, 18, 19)
-    ShowerLib2.Settings.Default.SideBarBackgroundColor = Table.SideBarBackgroundColor or Color3.fromRGB(28, 28, 28)
+    ShowerLib2.Settings.Default.SideBarBackgroundColor = Table.SideBarBackgroundColor or Color3.fromRGB(12, 12, 12)
     ShowerLib2.Settings.Default.PageIndicatorBackgroundColor = Table.PageIndicatorBackgroundColor or Color3.fromRGB(16, 16, 16)
 
 end
