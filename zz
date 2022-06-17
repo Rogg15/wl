@@ -18,7 +18,7 @@ ShowerLib2.Settings.Default.PageIndicatorBackgroundColor = Color3.fromRGB(16, 16
 --PageIndicator
 --Color3.fromRGB(12, 12, 12)
 
-local UIName = ("Xcrobic")
+local UIName = tostring(math.random(1, 100))..tostring("ShowerLib")..tostring(math.random(1, 100))
 
 ShowerLib2.Settings.Parent = game:GetService("CoreGui")
 ShowerLib2.Settings.Sliding = false;
@@ -321,8 +321,34 @@ function ShowerLib2:CreateWindow(Name)
     
     function Nigger:Section(Name)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+--tostring(math.random(1, 100))..tostring("ShowerLib")..tostring(math.random(1, 100))
+
+
+
+
+
+
+
+
+
+
+
+
         local Nigga = {}
-        local SectionName = tostring(Name)..tostring(math.random(1, 100));
+        local SectionName = (Name)
 
         local Vis = false;
         if FirstTab == false then
