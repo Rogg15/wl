@@ -518,9 +518,11 @@ function library:Window(options)
                     SepFrame.Name = "SepFrame"
                     SepFrame.Parent = Section_Frame_2
                     SepFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+                    SepFrame.BackgroundTransparency = 1.000
                     SepFrame.BorderSizePixel = 0
                     SepFrame.Position = UDim2.new(0.042857144, 0, 0.724444449, 0)
                     SepFrame.Size = UDim2.new(0, 258, 0, 1)
+                    
 
                     local main_functions = {}
 
