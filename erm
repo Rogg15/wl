@@ -74,7 +74,7 @@ local function DrawESP(plr)
                 if getgenv().useTeamColor then
                     highlight.FillColor = plr.TeamColor.Color
                 else
-                    highlight.FillColor = Color3.fromHSV(math.clamp(Distance / 5, 0, 125) / 255, 0.75, 1)
+                    highlight.FillColor = Color3.fromHSV(math.clamp(Distance / 0,0,188) / 0,0,188)
                 end
 
 
@@ -85,7 +85,7 @@ local function DrawESP(plr)
                     if getgenv().useTeamColor then
                         Name.Color = plr.TeamColor.Color
                     else
-                        Name.Color = Color3.fromHSV(math.clamp(Distance / 5, 0, 125) / 255, 0.75, 1)
+                        Name.Color = Color3.fromHSV(math.clamp(Distance / 0,0,188) / 0,0,188)
                     end
                     Name.Visible = true
                     Name.Font = FontValue
