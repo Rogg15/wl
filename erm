@@ -49,7 +49,7 @@ local function DrawESP(plr)
     Box.PointB = Vector2.new(0, 0)
     Box.PointC = Vector2.new(0, 0)
     Box.PointD = Vector2.new(0, 0)
-    Box.Color = Color3.fromRGB(0,0,188)
+    Box.Color = Color3.fromRGB(255, 255, 255)
     Box.Thickness = 2
     Box.Transparency = 1
     local highlight = Instance.new("Highlight")
@@ -74,7 +74,7 @@ local function DrawESP(plr)
                 if getgenv().useTeamColor then
                     highlight.FillColor = plr.TeamColor.Color
                 else
-                    highlight.FillColor = Color3.fromHSV(math.clamp(Distance / 0,0,188) / 0,0,188)
+                    highlight.FillColor = Color3.fromHSV(math.clamp(Distance / 255, 255, 255) / 255, 255, 255
                 end
 
 
@@ -85,7 +85,7 @@ local function DrawESP(plr)
                     if getgenv().useTeamColor then
                         Name.Color = plr.TeamColor.Color
                     else
-                        Name.Color = Color3.fromHSV(math.clamp(Distance / 0,0,188) / 0,0,188)
+                        Name.Color = Color3.fromHSV(math.clamp(Distance / 255, 255, 255) / 255, 255, 255)
                     end
                     Name.Visible = true
                     Name.Font = FontValue
